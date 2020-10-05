@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruza de Dogs</title>
+    <script type="module">
+        import Pessoa from "./model/pessoa.js"
+        import Dog from "./model/dog.js"
+        import Cruza from "./model/cruza.js"
+
+        let dono1 = new Pessoa("kleves","2222222");
+        let dono2 = new Pessoa("Marcos","3333333");
+
+        let dog1 = new Dog("Less","F", "Labrador",dono1);
+        let dog2 = new Dog("Brutos","M", "Labrador",dono2);
+
+        let cruza1 = new Cruza(dog1,dog2);
+        
+        console.log("Dados do dog 1");
+        console.log(cruza1.dog1.nome);
+        console.log(cruza1.dog1.sexo);
+        console.log(cruza1.dog1.raca);
+       
+        console.log("Dados do dog 2");
+        console.log(cruza1.dog2.nome);
+        console.log(cruza1.dog2.sexo);
+        console.log(cruza1.dog2.raca);
+        console.log("Dados do dono 1")
+        console.log(cruza1.dog1.dono.nome);
+        console.log(cruza1.dog1.dono.telefone);
+
+        console.log("Dados do dono 2")
+        console.log(cruza1.dog2.dono.nome);
+        console.log(cruza1.dog2.dono.telefone);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
